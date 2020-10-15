@@ -10,7 +10,7 @@ VALUES('Sam', 'asdad@gmai.com','$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGev
 ('Saamdo', 'asdsdaad@gmai.com','$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u');
 
 
-INSERT INTO properties(owner_id, title,description,thumbnail_photo_url,cover_photo_url,
+INSERT INTO properties (owner_id,title,description,thumbnail_photo_url,cover_photo_url,
 cost_per_night,parking_spaces,number_of_bathrooms,number_of_bedrooms,country,
 street,city,province,post_code,active)
 
@@ -22,11 +22,11 @@ VALUES(1,'idk',"description","http/bualabdabsudbaudabisabdsb","http//asmdjandajn
 'dada',ture),
 (2,'idk',"description","http/bualabdabsudbaudabisabdsb","http//asmdjandajnajndajn",299,2,2,2,
 "somewhere on earth","who cares",'random city','who knows',
-'dada',ture),
+'dada',ture);
 
 
 
-INSERT INTO property_reviews(guest_id,property_id,reservations_id,rating,message)
-VALUES(1,2,3,4,"message"),
-(2,2,3,4,"message"),
-(3,2,3,4,"message");
+INSERT INTO property_reviews (
+  guest_id, property_id, reservation_id, rating, message) 
+  VALUES (612, 228, 1012685, 4, 'Tulakana etojac wov esamifmaf vesiare kav wuhif wopo jitrucne dalose fasad vi pecdiki ipilezvam.'),
+        (612, 228, 1012685, 4, 'Tulakana etojac wov esamifmaf vesiare kav wuhif wopo jitrucne dalose fasad vi pecdiki ipilezvam.');
