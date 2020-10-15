@@ -17,8 +17,9 @@ const pool = new Pool({
 const getUserWithEmail = function(email) {
   return pool.query(
       `
-  SELECT users.* FROM users WHERE users.email = $1`,
-      [email]
+  SELECT users.* FROM users 
+  WHERE users.email = $1`,
+    [email]
     )
     .then(res => {
       if (res.rows) {
@@ -39,7 +40,8 @@ exports.getUserWithEmail = getUserWithEmail;
  */
 const getUserWithId = function(id) {
   return pool
-    .query(`SELECT users.* FROM users WHERE users.id = $1`, [id])
+    .query(`SELECT users.* FROM users 
+    WHERE users.id = $1`, [id])
     .then(res => {
       if (res.rows) {
         return res.rows[0];
@@ -56,7 +58,8 @@ exports.getUserWithId = getUserWithId;
  */
 const addUser = function(user) {
   return pool.query(
-    `INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *`,
+    `INSERT INTO users (name, email, password) 
+    VALUES ($1, $2, $3) RETURNING *`,
     [user.name, user.email, user.password]
   );
   // .then(res => console.log("registered!"));
